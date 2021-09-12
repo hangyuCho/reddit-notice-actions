@@ -43,12 +43,13 @@ const getReport = async(query) => {
 const getData = async (query) => {
     return await getReport(query)
 }
-
+/*
 const translate = async (query) => {
     var body = await axios.get("https://www.google.com/search?q=hoge")
     return body
 }
-/*
+
+*/
 const translate = async (query) => {
     var client_id = process.env.CLIENT_ID;
     var client_secret = process.env.CLIENT_SECRET;
@@ -65,5 +66,4 @@ const translate = async (query) => {
     return body.data.message.result.translatedText
 
 }
-*/
 export default getData
