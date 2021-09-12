@@ -3,7 +3,7 @@ const sendReport = (json) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     var body = json.map(j => {
         return `
-        <strong>${j.title}</strong>
+        <strong>${j.transTitle}</strong>
         <p>${j.url}</p>
         <br/>
         `
