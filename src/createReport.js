@@ -13,8 +13,8 @@ const sendReport = (json) => {
     //from: 'em1614.h-9.info',
     from: 'noreply@h-9.info',
     //from: 'chg3376@gmail.com',
-    subject: `Daily Report : ${json.find(e => true).title}`,
-    text: json.find(e => true).title,
+    subject: `Daily Report : ${json.find(e => true).transTitle}`,
+    text: json.find(e => true).transTitle,
     html: body,
     }
     sgMail
