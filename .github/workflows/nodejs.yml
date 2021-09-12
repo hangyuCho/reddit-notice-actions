@@ -14,17 +14,17 @@ jobs:
       matrix:
         node-version: [12.14.1]
 
-      steps:
-        - uses: actions/checkout@v2
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v1
-          with:
-            node-version: ${{ matrix.node-version }}
-        - name: Install dependencies
-          run: npm Install
-          name: Run Script
-          run: npm start
-          env: 
-            CLIENT_ID: ${{ secrets.CLIENT_ID }}
-            CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-            SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm Install
+        name: Run Script
+        run: npm start
+        env: 
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
