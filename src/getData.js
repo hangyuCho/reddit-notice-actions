@@ -33,9 +33,9 @@ const getReport = async(query) => {
     //return redditJson.slice(0).map( json => {
     const promises = redditJson.slice(0).map(async json => {
             const { title, url } = json.data
-            //let transTitle = await translate(title)
-            //return { transTitle, url }
-            return { title, url }
+            let transTitle = await translate(title)
+            return { transTitle, url }
+            //return { title, url }
         })
     return Promise.all(promises)
 }
