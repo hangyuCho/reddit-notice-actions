@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    #- cron: "0 8 * * 1,2,3,4,5"
-    - cron: "0/1 * * * *"
+    - cron: "0 8 * * 1,2,3,4,5"
+    #- cron: "0/1 * * * *"
 jobs:
   send-report:
     runs-on: ubuntu-latest
