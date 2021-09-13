@@ -11,8 +11,9 @@ const sendReport = (json) => {
     const msg = {
     to: 'chg3376@kakao.com',
     from: 'noreply@h-9.info',
-    subject: `Daily Report : ${json.find(e => true).title}`,
-    text: json.find(e => true).title,
+    //from: 'chg3376@gmail.com',
+    subject: `Daily Report : ${json.find(e => true).transTitle}`,
+    text: json.find(e => true).transTitle,
     html: body,
     }
     sgMail
