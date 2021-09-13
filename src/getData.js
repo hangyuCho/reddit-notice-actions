@@ -9,6 +9,7 @@ const getReport = async(query) => {
     const promises = redditJson.slice(0).map(async json => {
             const { title, url } = json.data
             let transTitle = await translate(title)
+            transTitle = transTitle.replace(/^, /, "")
             return { transTitle, url }
             //return { title, url }
         })
